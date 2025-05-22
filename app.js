@@ -75,8 +75,9 @@ app.listen(8080, () => {
 })
 
 app.get("/", (req, res) => {
-    res.send("Hi, I am root");
     res.redirect("/listings");
+    res.send("Hi, I am root");
+
 });
 
 app.use(session(sessionOptions));
